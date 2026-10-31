@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=390, height=844, initial-scale=1.0">
+<title>Lynq · Emergency SOS</title>
+<link rel="stylesheet" href="tokens.css">
+<style>
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+.cat-pill {
+  background: var(--surface);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px 4px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+.cat-pill.active {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+}
+.cat-pill.active svg {
+  color: #fff;
+}
+.apple-sos-btn {
+  background: var(--red);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(255, 69, 58, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+}
+.apple-sos-btn h2 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.apple-sos-btn p {
+  font-size: 13px;
+  opacity: 0.85;
+}
+</style>
+</head>
+<body>
+  <div class="app-screen">
+    <header class="top-bar">
+      <h1 class="top-bar-title">Emergency SOS</h1>
+      <div class="status-capsule">
+        <span class="status-dot"></span>
+        <span>Mesh Ready</span>
+      </div>
+    </header>
+
+    <main class="content-body">
+      <div class="screen-subtitle">Offline peer-to-peer broadcast · Unconditionally prioritised</div>
+
+      <!-- Category Selector -->
+      <div>
+        <div class="section-hdr">
+          <div class="section-hdr-title">Emergency Type</div>
+        </div>
+        <div style="height:8px;"></div>
+        <div class="cat-grid">
+          <div class="cat-pill active">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/></svg>
+            <span>Medical</span>
+          </div>
+          <div class="cat-pill">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M19.48 12.35c-1.57-.56-2.53-.89-3.48-2.02-.91-1.07-1.13-2.61-.71-4.14-.8 1.15-1.58 2.66-1.58 4.31 0 1.25.43 2.37 1.15 3.26-.85-.14-1.63-.56-2.26-1.22-.96-1.02-1.39-2.47-1.23-3.95-1.06 1.4-1.64 3.19-1.64 5.09 0 4.14 3.36 7.5 7.5 7.5s7.5-3.36 7.5-7.5c0-.49-.05-.97-.15-1.44-.94.75-2.06 1.11-3.1 1.11z"/></svg>
+            <span>Fire</span>
+          </div>
+          <div class="cat-pill">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+            <span>Trapped</span>
+          </div>
+          <div class="cat-pill">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+            <span>Threat</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Location & Details Card -->
+      <div class="apple-card">
+        <div class="apple-row">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="width:34px; height:34px; border-radius:50%; background:var(--surface-elevated); display:flex; align-items:center; justify-content:center;">
+              <svg viewBox="0 0 24 24" fill="var(--blue)" width="18" height="18"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div>
+              <div style="font-weight:600; font-size:15px;">Share Location</div>
+              <div style="font-size:13px; color:var(--text-secondary);">19.0760° N, 72.8777° E (±4m)</div>
+            </div>
+          </div>
+          <span style="color:var(--green); font-size:13px; font-weight:600;">Active</span>
+        </div>
+        <div class="apple-divider"></div>
+        <div style="padding:14px 16px;">
+          <input type="text" placeholder="Add details (injuries, floor, hazards)…" style="width:100%; background:transparent; border:none; outline:none; color:var(--text-primary); font-size:15px; font-family:var(--font-sans);" value="Asthma attack, inhaler depleted. In east shelter.">
+        </div>
+      </div>
+
+      <!-- Action Button -->
+      <div class="apple-sos-btn">
+        <h2>Send Emergency SOS</h2>
+        <p>Instantly floods across all reachable phones</p>
+      </div>
+
+      <!-- Active Propagation Pathway -->
+      <div>
+        <div class="section-hdr">
+          <div class="section-hdr-title">Live Relay Route</div>
+        </div>
+        <div style="height:8px;"></div>
+        <div class="apple-card" style="padding:16px;">
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:14px; color:var(--text-primary); font-weight:600;">You (Origin)</span>
+              <span style="font-size:12px; color:var(--green);">✓ Dispatched</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:14px; color:var(--text-primary); font-weight:600;">Aarav (Relay 1)</span>
+              <span style="font-size:12px; color:var(--green);">✓ Forwarded</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:14px; color:var(--text-primary); font-weight:600;">Kabir (Relay 2)</span>
+              <span style="font-size:12px; color:var(--green);">✓ Forwarded</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:14px; color:var(--text-secondary);">Priya (Recipient)</span>
+              <span style="font-size:12px; color:var(--amber);">Relaying…</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <nav class="apple-tab-bar">
+      <a class="tab-item" href="dashboard.html">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        <span>Network</span>
+      </a>
+      <a class="tab-item" href="messages.html">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+        <span>Messages</span>
+      </a>
+      <a class="tab-item tab-sos active" href="emergency.html">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+        <span>SOS</span>
+      </a>
+      <a class="tab-item" href="mesh.html">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        <span>Mesh</span>
+      </a>
+      <a class="tab-item" href="settings.html">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+        <span>Settings</span>
+      </a>
+    </nav>
+  </div>
+</body>
+</html>

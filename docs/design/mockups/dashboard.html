@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=390, height=844, initial-scale=1.0">
+<title>Lynq · Network</title>
+<link rel="stylesheet" href="tokens.css">
+</head>
+<body>
+  <div class="app-screen">
+    <!-- Apple Top Navigation Bar -->
+    <header class="top-bar">
+      <h1 class="top-bar-title">Network</h1>
+      <div class="status-capsule">
+        <span class="status-dot"></span>
+        <span>4 online</span>
+      </div>
+    </header>
+
+    <main class="content-body">
+      <div class="screen-subtitle">Decentralized mesh active · 0 cellular needed</div>
+
+      <!-- Protagonist: Obsidian Knowledge Graph -->
+      <div class="obsidian-canvas">
+        <div class="obsidian-controls">
+          <div style="display:flex; align-items:center; gap:6px;">
+            <span style="width:6px; height:6px; border-radius:50%; background:var(--blue);"></span>
+            <span style="font-size:11px; font-weight:500; color:var(--text-secondary);">Obsidian Mesh</span>
+          </div>
+          <span style="font-size:11px; color:var(--text-muted);">Pinch / Pan</span>
+        </div>
+
+        <svg class="obsidian-svg" viewBox="0 0 358 240">
+          <defs>
+            <radialGradient id="halo-you" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#0A84FF" stop-opacity="0.35"/>
+              <stop offset="100%" stop-color="#0A84FF" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="halo-sos" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#FF453A" stop-opacity="0.45"/>
+              <stop offset="100%" stop-color="#FF453A" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+
+          <!-- Cosmic Dust -->
+          <circle cx="35" cy="40" r="1" fill="#fff" opacity="0.1"/>
+          <circle cx="320" cy="35" r="1.2" fill="#fff" opacity="0.12"/>
+          <circle cx="290" cy="190" r="1" fill="#fff" opacity="0.08"/>
+          <circle cx="65" cy="180" r="1.2" fill="#fff" opacity="0.1"/>
+
+          <!-- Delicate Filaments -->
+          <line x1="150" y1="120" x2="70" y2="70" stroke="#0A84FF" stroke-width="1.2" stroke-opacity="0.35"/>
+          <line x1="70" y1="70" x2="280" y2="150" stroke="#fff" stroke-width="1" stroke-dasharray="4 4" stroke-opacity="0.15"/>
+
+          <!-- Glowing SOS Route: You -> Aarav -> Kabir -> Priya -->
+          <line x1="150" y1="120" x2="230" y2="60" stroke="#FF453A" stroke-width="4.5" stroke-opacity="0.25" stroke-linecap="round"/>
+          <line x1="150" y1="120" x2="230" y2="60" stroke="#FF453A" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="190" cy="90" r="2.5" fill="#fff"/>
+
+          <line x1="230" y1="60" x2="280" y2="150" stroke="#FF453A" stroke-width="4.5" stroke-opacity="0.25" stroke-linecap="round"/>
+          <line x1="230" y1="60" x2="280" y2="150" stroke="#FF453A" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="255" cy="105" r="2.5" fill="#fff"/>
+
+          <line x1="280" y1="150" x2="195" y2="200" stroke="#FF453A" stroke-width="4.5" stroke-opacity="0.25" stroke-linecap="round"/>
+          <line x1="280" y1="150" x2="195" y2="200" stroke="#FF453A" stroke-width="2" stroke-linecap="round"/>
+
+          <!-- Nodes -->
+          <!-- YOU -->
+          <circle cx="150" cy="120" r="18" fill="url(#halo-you)"/>
+          <circle cx="150" cy="120" r="8" fill="#000"/>
+          <circle cx="150" cy="120" r="6" fill="#0A84FF"/>
+          <circle cx="150" cy="120" r="2.2" fill="#fff"/>
+          <text x="162" y="124" fill="#fff" font-size="11.5" font-weight="600" font-family="-apple-system, sans-serif">You</text>
+
+          <!-- Aarav -->
+          <circle cx="230" cy="60" r="14" fill="url(#halo-sos)"/>
+          <circle cx="230" cy="60" r="7" fill="#000"/>
+          <circle cx="230" cy="60" r="5" fill="#FF453A"/>
+          <circle cx="230" cy="60" r="2" fill="#fff"/>
+          <text x="240" y="64" fill="#FF453A" font-size="10.5" font-weight="600" font-family="-apple-system, sans-serif">Aarav</text>
+
+          <!-- Meera -->
+          <circle cx="70" cy="70" r="7" fill="#000"/>
+          <circle cx="70" cy="70" r="5" fill="#30D158"/>
+          <circle cx="70" cy="70" r="2" fill="#fff"/>
+          <text x="80" y="74" fill="#FFFFFF" font-size="10.5" font-family="-apple-system, sans-serif">Meera</text>
+
+          <!-- Kabir -->
+          <circle cx="280" cy="150" r="14" fill="url(#halo-sos)"/>
+          <circle cx="280" cy="150" r="7" fill="#000"/>
+          <circle cx="280" cy="150" r="5" fill="#FF453A"/>
+          <circle cx="280" cy="150" r="2" fill="#fff"/>
+          <text x="290" y="154" fill="#FF453A" font-size="10.5" font-weight="600" font-family="-apple-system, sans-serif">Kabir</text>
+
+          <!-- Priya -->
+          <circle cx="195" cy="200" r="14" fill="url(#halo-sos)"/>
+          <circle cx="195" cy="200" r="7" fill="#000"/>
+          <circle cx="195" cy="200" r="5" fill="#FF453A"/>
+          <circle cx="195" cy="200" r="2" fill="#fff"/>
+          <text x="205" y="204" fill="#FF453A" font-size="10.5" font-weight="600" font-family="-apple-system, sans-serif">Priya</text>
+        </svg>
+
+        <div class="obsidian-legend">
+          <div style="display:flex; gap:12px;">
+            <span>● You</span>
+            <span style="color:var(--green)">● Relay</span>
+            <span style="color:var(--red)">● SOS Path</span>
+          </div>
+          <span>5 nodes</span>
+        </div>
+      </div>
+
+      <!-- Apple Emergency SOS Trigger -->
+      <a class="apple-sos-trigger" href="emergency.html">
+        <div class="apple-sos-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+          </svg>
+        </div>
+        <div class="apple-sos-info">
+          <h3>Emergency SOS</h3>
+          <p>Broadcast alert to all reachable nodes across mesh hops</p>
+        </div>
+      </a>
+
+      <!-- Quick Health / Metric Tiles -->
+      <div class="metric-grid">
+        <div class="metric-tile">
+          <div class="metric-label">Reachable</div>
+          <div class="metric-val" style="color:var(--blue)">4</div>
+        </div>
+        <div class="metric-tile">
+          <div class="metric-label">Relaying</div>
+          <div class="metric-val" style="color:var(--green)">2</div>
+        </div>
+        <div class="metric-tile">
+          <div class="metric-label">Queued</div>
+          <div class="metric-val" style="color:var(--amber)">0</div>
+        </div>
+      </div>
+
+      <!-- Recent Transmissions -->
+      <div>
+        <div class="section-hdr">
+          <div class="section-hdr-title">Recent Transmissions</div>
+          <a class="section-hdr-action" href="messages.html">See All</a>
+        </div>
+        <div style="height:8px;"></div>
+        <div class="apple-card">
+          <a class="apple-row" href="messages.html">
+            <div class="avatar">A</div>
+            <div style="flex:1;">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-weight:600; font-size:16px;">Aarav</span>
+                <span style="font-size:12px; color:var(--text-muted);">2m ago</span>
+              </div>
+              <div style="font-size:14px; color:var(--text-secondary); margin:2px 0 6px;">Reached the shelter, two more with me.</div>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div class="route-trace">
+                  <span>Aarav</span>
+                  <span class="route-trace-arrow">→</span>
+                  <span class="route-trace-target">You</span>
+                </div>
+                <span class="chip chip-delivered">✓ Delivered</span>
+              </div>
+            </div>
+          </a>
+          <div class="apple-divider"></div>
+          <a class="apple-row" href="messages.html">
+            <div class="avatar avatar-relay">M</div>
+            <div style="flex:1;">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-weight:600; font-size:16px;">Meera</span>
+                <span style="font-size:12px; color:var(--text-muted);">26m ago</span>
+              </div>
+              <div style="font-size:14px; color:var(--text-secondary); margin:2px 0 6px;">Water at the north gate. Bring the kit.</div>
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div class="route-trace">
+                  <span>Meera</span>
+                  <span class="route-trace-arrow">→</span>
+                  <span>Kabir</span>
+                  <span class="route-trace-arrow">→</span>
+                  <span class="route-trace-target">You</span>
+                </div>
+                <span class="chip chip-relayed">⟲ Relayed</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Apple Tab Bar -->
+    <nav class="apple-tab-bar">
+      <a class="tab-item active" href="dashboard.html">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        <span>Network</span>
+      </a>
+      <a class="tab-item" href="messages.html">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+        <span>Messages</span>
+      </a>
+      <a class="tab-item tab-sos" href="emergency.html">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+        <span>SOS</span>
+      </a>
+      <a class="tab-item" href="mesh.html">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        <span>Mesh</span>
+      </a>
+      <a class="tab-item" href="settings.html">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+        <span>Settings</span>
+      </a>
+    </nav>
+  </div>
+</body>
+</html>

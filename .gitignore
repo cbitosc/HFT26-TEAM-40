@@ -1,0 +1,54 @@
+# -----------------------------
+# Android & Kotlin (Frontend)
+# -----------------------------
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+/app/build/
+
+# -----------------------------
+# Python & FastAPI (Backend)
+# -----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+pip-log.txt
+
+# -----------------------------
+# Secrets & Security (CRITICAL)
+# -----------------------------
+# Do not commit Featherless API keys or Android signing keys
+.env
+*.jks
+*.keystore
+keystore.properties
+shots/
+
+# -----------------------------
+# Local Agent Skills & CLI Tooling (DO NOT COMMIT)
+# -----------------------------
+.agents/
+skills-lock.json
+.codex/
+node_modules/
+
+# -----------------------------
+# Media, Videos, and Presentations (DO NOT COMMIT)
+# -----------------------------
+*.pptx
+demo-video/
+ppt/*.pptx
+ppt/rounded_screens/
+docs/*.mp4
+docs/*.jpg
+.~lock.*
+

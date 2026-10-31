@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <group
+        android:pivotX="54"
+        android:pivotY="54"
+        android:rotation="-35">
+
+        <!-- 1. Link 2 (Right Capsule: Apple Ceramic White) - Base Full Path -->
+        <path
+            android:pathData="M59,42 L69,42 A12,12 0 0,1 69,66 L59,66 A12,12 0 0,1 59,42 Z"
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="6.2"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round" />
+
+        <!-- 2. Interlocking Cutout for Link 1 Top Crossing (Negative Space Depth) -->
+        <path
+            android:pathData="M44,42 L53,42"
+            android:strokeColor="#000000"
+            android:strokeWidth="9.6"
+            android:strokeLineCap="round" />
+
+        <!-- 3. Link 1 (Left Capsule: Apple Electric Blue) - Full Interlocking Loop -->
+        <path
+            android:pathData="M39,42 L49,42 A12,12 0 0,1 49,66 L39,66 A12,12 0 0,1 39,42 Z"
+            android:strokeWidth="6.2"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round">
+            <aapt:attr name="android:strokeColor">
+                <gradient
+                    android:type="linear"
+                    android:startX="27"
+                    android:startY="42"
+                    android:endX="61"
+                    android:endY="66">
+                    <item android:offset="0.0" android:color="#FF38A2FF" />
+                    <item android:offset="1.0" android:color="#FF0A84FF" />
+                </gradient>
+            </aapt:attr>
+        </path>
+
+        <!-- 4. Interlocking Weave: Link 2 Passes OVER Link 1 at Bottom Crossing -->
+        <!-- Negative space border cutout -->
+        <path
+            android:pathData="M54,66 L62,66"
+            android:strokeColor="#000000"
+            android:strokeWidth="9.6"
+            android:strokeLineCap="round" />
+
+        <!-- White foreground segment creating the physical interlock -->
+        <path
+            android:pathData="M54,66 L62,66"
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="6.2"
+            android:strokeLineCap="round" />
+
+    </group>
+
+</vector>
